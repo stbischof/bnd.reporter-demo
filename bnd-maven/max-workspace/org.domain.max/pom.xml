@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.domain</groupId>
+		<artifactId>max-workspace</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>org.domain.max</artifactId>
+	<packaging>pom</packaging>
+
+	<name>Max Providers</name>
+	<description>Procedente igitur mox tempore cum adventicium nihil inveniretur, 
+relicta ora maritima in Lycaoniam adnexam Isauriae se contulerunt ibique densis.</description>
+
+	<properties>
+		<templates.dir>file://${project.basedir}/../../../templates</templates.dir>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.osgi.enroute</groupId>
+			<artifactId>osgi-api</artifactId>
+			<type>pom</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>bnd-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+	<modules>
+		<module>org.domain.max.one.provider</module>
+		<module>org.domain.max.two.provider</module>
+	</modules>
+</project>

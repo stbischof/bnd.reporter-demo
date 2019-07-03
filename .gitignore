@@ -1,0 +1,9 @@
+
+**/bin/
+**/bin_test/
+**/generated/
+**/.DS_Store
+**/.gradle/
+**/enroute.zip
+**/.metadata
+**/target/

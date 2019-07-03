@@ -1,0 +1,64 @@
+Bundle-Name: Max API
+Bundle-Version: 1.0.0.${tstamp}
+Bundle-Description: Procedente igitur mox tempore cum adventicium nihil inveniretur, \
+relicta ora maritima in Lycaoniam adnexam Isauriae se contulerunt ibique densis intersaepientes \
+itinera praetenturis provincialium et viatorum opibus pascebantur.
+Bundle-License:\
+	"Apache License, Version 2.0";\
+	link=https://www.apache.org/licenses/LICENSE-2.0.html;\
+	description="Licensed under the Apache License, Version 2.0. You \
+may not use this file except in compliance with the License. Unless required by applicable \
+law or agreed to in writing, software distributed under the License is distributed on an \
+AS IS BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. \
+See the License for the specific language governing permissions and limitations under \
+the License.",\
+\
+	"Apache License, Version x.0";\
+	description="Licensed under the Apache License, Version 2.0. You \
+may not use this file except in compliance with the License. Unless required by applicable \
+law or agreed to in writing, software distributed under the License is distributed on an \
+AS IS BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. \
+See the License for the specific language governing permissions and limitations under \
+the License."
+Bundle-Copyright: MyXZCompagny 2018
+Bundle-Developers: \
+	cdelg;\
+		name="Clement Delgrange";\
+		email='cde@domain.org';\
+		organization=MyXZCompagny;\
+		roles="developer, architect";\
+		organizationUrl=https://www.myxzcompagny.com/,\
+		\
+	sensum.abstulit@domain.org;\
+		name="Sensum Abstulit";\
+		organization=MyXZCompagny;\
+		roles="contributor";\
+		organizationUrl=https://www.myxzcompagny.com/,\
+		\
+	caput.enim@domain.org;\
+		name="Caput Enim ",\
+	\
+	videre;\
+		name="Videre Plebem";\
+		roles="contributor"				
+Bundle-ContactAddress: https://www.myxzcompagny.com/
+Bundle-DocURL: https://github.com/myxzcompagny/max-min/tree/master/max-min
+Bundle-Icon: https://raw.githubusercontent.com/myxzcompagny/max-min/master/templates/icon/icon.png
+Bundle-SCM: \
+	url=https://github.com/myxzcompagny/max-min,\
+	connection=scm:git:https://github.com/myxzcompagny/max-min.git,\
+	developerConnection=scm:git:git@github.com:myxzcompagny/max-min.git 
+Bundle-UpdateLocation: https://www.myxzcompagny.com/repo
+Bundle-Vendor: MyXZCompagny
+maven.groupid: org.domain
+maven.artifactid: ${def;bsn;''}
+maven.version: ${versionmask;===s;${Bundle-Version}}
+-groupid=${maven.groupid}
+-pom:\
+	version=${maven.version},\
+	groupid=${maven.groupid},\
+	artifactid= ${maven.artifactid}
+
+-buildpath: \
+	osgi.annotation;version=7.0,\
+	osgi.cmpn;version=7.0

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.domain</groupId>
+	<artifactId>min-workspace</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<bnd.version>4.3.0-SNAPSHOT</bnd.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>OSGi</id>
+			<name>OSGi public binaries</name>
+			<url>https://oss.sonatype.org/content/groups/osgi</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>Apache Snapshots</id>
+			<url>https://repository.apache.org/content/groups/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>Bnd Snapshots</id>
+			<name>Bnd Latest build</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.osgi.enroute</groupId>
+				<artifactId>osgi-api</artifactId>
+				<version>7.0.0</version>
+				<type>pom</type>
+				<scope>provided</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- Use the bnd-maven-plugin and assemble the symbolic names -->
+				<plugin>
+					<groupId>biz.aQute.bnd</groupId>
+					<artifactId>bnd-maven-plugin</artifactId>
+					<version>${bnd.version}</version>
+					<configuration>
+						<bnd><![CDATA[
+Bundle-SymbolicName: ${project.artifactId}
+-sources: true
+-contract: *
+]]>						</bnd>
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>bnd-process</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<!-- Required to make the maven-jar-plugin pick up the bnd generated 
+					manifest. Also avoid packaging empty Jars -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.0.2</version>
+					<configuration>
+						<archive>
+							<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+						</archive>
+						<skipIfEmpty>true</skipIfEmpty>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<plugin>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>bnd-reporter-maven-plugin</artifactId>
+				<version>${bnd.version}</version>
+				<configuration>
+					<reports>						
+						<report>
+							<outputFile>readme.md</outputFile>
+							<templateFile>file://${project.basedir}/../../templates/readme.twig</templateFile>
+							<parameters>
+								<templateDir>file://${project.basedir}/../../templates</templateDir>
+							</parameters>
+						</report>
+					</reports>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<modules>
+	</modules>
+
+</project>

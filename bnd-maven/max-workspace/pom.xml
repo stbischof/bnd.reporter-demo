@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.domain</groupId>
+	<artifactId>max-workspace</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
+	<name>Max-Min</name>
+	<description>Quam ob rem vita quidem talis fuit vel fortuna vel gloria, ut nihil 
+	posset accedere, moriendi autem sensum celeritas abstulit; quo de genere mortis 
+	difficile dictu est; quid homines suspicentur, videtis; hoc vere tamen licet dicere, 
+	P. Scipioni ex multis diebus, quos in vita celeberrimos laetissimosque viderit, illum 
+	diem clarissimum fuisse, cum senatu dimisso domum reductus ad vesperum est a patribus 
+	conscriptis, populo Romano, sociis et Latinis, pridie quam excessit e vita, ut ex tam 
+	alto dignitatis gradu ad superos videatur deos potius quam ad inferos pervenisse.</description>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<bnd.version>4.3.0-SNAPSHOT</bnd.version>
+		<templates.dir>file://${project.basedir}/../../templates</templates.dir>
+	</properties>
+
+	<developers>
+		<developer>
+			<id>cdelg</id>
+			<name>Clement Delgrange</name>
+			<email>cde@domain.org</email>
+			<organization>MyXZCompagny</organization>
+			<organizationUrl>https://www.myxzcompagny.com/</organizationUrl>
+			<roles>
+				<role>developer</role>
+				<role>architect</role>
+			</roles>
+		</developer>
+		<developer>
+			<id>sensum.abstulit@domain.org</id>
+			<name>Sensum Abstulit</name>
+			<email>pkt@domain.org</email>
+			<organization>MyXZCompagny</organization>
+			<organizationUrl>https://www.myxzcompagny.com/</organizationUrl>
+			<roles>
+				<role>contributor</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<comments>Licensed under the Apache License, Version 2.0. 
+			You may not use this file except in compliance with the License.
+			 Unless required by applicable law or agreed to in writing,
+			  software distributed under the License is distributed on an AS IS BASIS,
+			   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+			    See the License for the specific language governing permissions and limitations under the License.</comments>
+			<url>https://www.apache.org/licenses/LICENSE-2.0.html</url>
+		</license>
+	</licenses>
+
+	<distributionManagement>
+		<downloadUrl>https://www.myxzcompagny.com/repo</downloadUrl>
+	</distributionManagement>
+
+	<organization>
+		<name>MyXZCompagny</name>
+		<url>https://www.myxzcompagny.com/</url>
+	</organization>
+
+	<url>https://github.com/myxzcompagny/max-min/tree/master/max-min</url>
+
+	<scm>
+		<url>https://github.com/myxzcompagny/max-min</url>
+		<connection>scm:git:https://github.com/myxzcompagny/max-min.git</connection>
+		<developerConnection>scm:git:git@github.com:myxzcompagny/max-min.git</developerConnection>
+	</scm>
+
+	<repositories>
+		<repository>
+			<id>OSGi</id>
+			<name>OSGi public binaries</name>
+			<url>https://oss.sonatype.org/content/groups/osgi</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>Apache Snapshots</id>
+			<url>https://repository.apache.org/content/groups/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>Bnd Snapshots</id>
+			<name>Bnd Latest build</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.osgi.enroute</groupId>
+				<artifactId>osgi-api</artifactId>
+				<version>7.0.0</version>
+				<type>pom</type>
+				<scope>provided</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- Use the bnd-maven-plugin and assemble the symbolic names -->
+				<plugin>
+					<groupId>biz.aQute.bnd</groupId>
+					<artifactId>bnd-maven-plugin</artifactId>
+					<version>${bnd.version}</version>
+					<configuration>
+						<bnd><![CDATA[
+Bundle-SymbolicName: ${project.artifactId}
+-sources: true
+-contract: *
+]]>
+						</bnd>
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>bnd-process</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<!-- Required to make the maven-jar-plugin pick up the bnd generated 
+					manifest. Also avoid packaging empty Jars -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.0.2</version>
+					<configuration>
+						<archive>
+							<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+						</archive>
+						<skipIfEmpty>true</skipIfEmpty>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<plugin>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>bnd-reporter-maven-plugin</artifactId>
+				<version>${bnd.version}</version>
+				<configuration>
+					<reports>
+						<report>
+							<outputFile>readme.md</outputFile>
+							<templateFile>${templates.dir}/readme.twig</templateFile>
+							<parameters>
+								<templateDir>${templates.dir}</templateDir>
+							</parameters>
+						</report>
+					</reports>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<modules>
+		<module>org.domain.max</module>
+		<module>org.domain.max.api</module>
+		<module>org.domain.min.provider</module>
+	</modules>
+
+</project>

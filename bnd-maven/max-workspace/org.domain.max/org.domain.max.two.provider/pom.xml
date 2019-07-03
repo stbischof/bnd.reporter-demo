@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.domain</groupId>
+		<artifactId>org.domain.max</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>org.domain.max.two.provider</artifactId>
+	<packaging>jar</packaging>
+
+	<name>Max Two Provider</name>
+	<description>Oportunum est, ut arbitror, explanare nunc causam, quae ad exitium praecipitem Aginatium 
+inpulit iam inde a priscis maioribus nobilem, ut locuta est pertinacior fama. nec enim super 
+hoc ulla documentorum rata est fides.</description>
+
+	<properties>
+		<templates.dir>file://${project.basedir}/../../../../templates</templates.dir>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.osgi.enroute</groupId>
+			<artifactId>osgi-api</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>org.domain</groupId>
+			<artifactId>org.domain.max.api</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+
+		<plugins>
+			<plugin>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>bnd-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
