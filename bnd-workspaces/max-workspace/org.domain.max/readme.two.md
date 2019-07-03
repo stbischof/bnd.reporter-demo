@@ -32,7 +32,7 @@ Visit [https://www.myxzcompagny.com/repo](https://www.myxzcompagny.com/repo).
 
 ```
 Bundle Symbolic Name: org.domain.max.two.provider
-Version             : 1.0.0.201906251302
+Version             : 1.0.0.201907031502
 ```
 
 ## Components
@@ -71,7 +71,11 @@ No properties.
 
 ##### Pid: `org.domain.max.two.provider.MyOtherServiceImpl`
 
-No information available.
+|Attribute |Value |
+|--- |--- |
+|Id |`prop1` |
+|Required |**true** |
+|Type |**String** |
 
 ## Developers
 

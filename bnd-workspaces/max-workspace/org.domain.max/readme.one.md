@@ -32,7 +32,7 @@ Visit [https://www.myxzcompagny.com/repo](https://www.myxzcompagny.com/repo).
 
 ```
 Bundle Symbolic Name: org.domain.max.one.provider
-Version             : 1.0.0.201906251302
+Version             : 1.0.0.201907031502
 ```
 
 ## Components
@@ -51,9 +51,29 @@ No properties.
 
 #### Configuration - *policy = optional*
 
-##### Pid: `org.domain.max.one.basic`
+##### Factory Pid: `org.domain.max.one.basic`
 
-No information available.
+|Attribute |Value |
+|--- |--- |
+|Id |`prop1` |
+|Required |**true** |
+|Type |**Integer** |
+|Default |4 |
+|Value range |`max = 45` |
+
+|Attribute |Value |
+|--- |--- |
+|Id |`prop2` |
+|Required |**false** |
+|Type |**String** |
+
+|Attribute |Value |
+|--- |--- |
+|Id |`prop3` |
+|Required |**true** |
+|Type |**String** |
+|Description |Et est admodum mirum videre plebem innumeram mentibus ardore quodam infuso cum dimicationum |
+|Value range |"ONE", "TWO" |
 
 ---
 
