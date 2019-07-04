@@ -55,11 +55,11 @@ Private-Package:
 	osgi.cmpn;version=7.0 
 	
 -exportreport.max.sub:\
- 	readme.one.md;\
+ 	readme.one.provider.md;\
  		scope=project;\
  		template=default:readme.twig;\
 		parameters="currentBsn=org.domain.max.one.provider",\
-	readme.two.md;\
+	readme.two.provider.md;\
  		scope=project;\
  		template=default:readme.twig;\
 		parameters="currentBsn=org.domain.max.two.provider"

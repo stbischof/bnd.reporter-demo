@@ -20,8 +20,8 @@ Visit [https://www.myxzcompagny.com/repo](https://www.myxzcompagny.com/repo).
 
 * [**Max API**](org.domain.max.api): Procedente igitur mox tempore cum adventicium nihil inveniretur,relicta ora maritima in Lycaoniam adnexam Isauriae se contulerunt ibique densis intersaepientes itinera praetenturis provincialium et viatorum opibus pascebantur.
 * [**Max Providers**](org.domain.max): Procedente igitur mox tempore cum adventicium nihil inveniretur,relicta ora maritima in Lycaoniam adnexam Isauriae se contulerunt ibique densis.
-  * [**Max One Provider**](org.domain.max/): Ibi victu recreati et quiete,postquam abierat timor,vicos opulentos adorti equestriumadventu cohortium,quae casu propinquabant,nec resistere planitie porrecta conati digressi sunt retroque concedentes omne iuventutis robur relictum in sedibus acciverunt.
-  * [**Max Two Provider**](org.domain.max/): Oportunum est,ut arbitror,explanare nunc causam,quae ad exitium praecipitem Aginatium inpulit iam inde a priscis maioribus nobilem,ut locuta est pertinacior fama. nec enim super hoc ulla documentorum rata est fides.
+  * [**Max One Provider**](org.domain.max/readme.one.provider.md): Ibi victu recreati et quiete,postquam abierat timor,vicos opulentos adorti equestriumadventu cohortium,quae casu propinquabant,nec resistere planitie porrecta conati digressi sunt retroque concedentes omne iuventutis robur relictum in sedibus acciverunt.
+  * [**Max Two Provider**](org.domain.max/readme.two.provider.md): Oportunum est,ut arbitror,explanare nunc causam,quae ad exitium praecipitem Aginatium inpulit iam inde a priscis maioribus nobilem,ut locuta est pertinacior fama. nec enim super hoc ulla documentorum rata est fides.
 * [**org.domain.min.provider**](org.domain.min.provider)
 
 ## Developers

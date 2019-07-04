@@ -32,7 +32,7 @@ Visit [https://www.myxzcompagny.com/repo](https://www.myxzcompagny.com/repo).
 
 ```
 Bundle Symbolic Name: org.domain.max.two.provider
-Version             : 1.0.0.201907031502
+Version             : 1.0.0.201907031508
 ```
 
 ## Components

@@ -18,8 +18,8 @@ Visit [https://www.myxzcompagny.com/repo](https://www.myxzcompagny.com/repo).
 
 ## Built Artifacts
 
-* [**Max One Provider**](): Ibi victu recreati et quiete,postquam abierat timor,vicos opulentos adorti equestriumadventu cohortium,quae casu propinquabant,nec resistere planitie porrecta conati digressi sunt retroque concedentes omne iuventutis robur relictum in sedibus acciverunt.
-* [**Max Two Provider**](): Oportunum est,ut arbitror,explanare nunc causam,quae ad exitium praecipitem Aginatium inpulit iam inde a priscis maioribus nobilem,ut locuta est pertinacior fama. nec enim super hoc ulla documentorum rata est fides.
+* [**Max One Provider**](readme.one.provider.md): Ibi victu recreati et quiete,postquam abierat timor,vicos opulentos adorti equestriumadventu cohortium,quae casu propinquabant,nec resistere planitie porrecta conati digressi sunt retroque concedentes omne iuventutis robur relictum in sedibus acciverunt.
+* [**Max Two Provider**](readme.two.provider.md): Oportunum est,ut arbitror,explanare nunc causam,quae ad exitium praecipitem Aginatium inpulit iam inde a priscis maioribus nobilem,ut locuta est pertinacior fama. nec enim super hoc ulla documentorum rata est fides.
 
 ## Developers
 
