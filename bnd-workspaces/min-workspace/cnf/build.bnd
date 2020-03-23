@@ -1,8 +1,3 @@
 #
 # This file is left open for you to define your macros
 #
-
--exportreport:\
- 	${workspace}/readme.md;\
- 		scope=workspace;\
- 		template=default:readme.twig

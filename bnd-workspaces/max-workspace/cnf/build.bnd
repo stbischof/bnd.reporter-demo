@@ -38,11 +38,3 @@ ws-scm:\
 ws-copyright: MyXZCompagny 2018
 ws-vendor: MyXZCompagny
 ws-contactAddress: https://www.myxzcompagny.com/
-	
--exportreport:\
- 	${workspace}/readme.md;\
- 		scope=workspace;\
- 		template=default:readme.twig,\
- 	readme.md;\
- 		scope=project;\
- 		template=default:readme.twig

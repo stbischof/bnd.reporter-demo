@@ -54,14 +54,3 @@ Private-Package:
 	org.domain.max.api;version=latest,\
 	osgi.cmpn;version=7.0 
 	
--exportreport.max.sub:\
- 	readme.one.provider.md;\
- 		scope=project;\
- 		template=default:readme.twig;\
-		parameters="currentBsn=org.domain.max.one.provider",\
-	readme.two.provider.md;\
- 		scope=project;\
- 		template=default:readme.twig;\
-		parameters="currentBsn=org.domain.max.two.provider"
-		
-		

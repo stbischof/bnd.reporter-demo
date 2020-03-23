@@ -2,19 +2,11 @@
 
 Procedente igitur mox tempore cum adventicium nihil inveniretur,relicta ora maritima in Lycaoniam adnexam Isauriae se contulerunt ibique densis intersaepientes itinera praetenturis provincialium et viatorum opibus pascebantur.
 
-## Documentation
+## Links
 
-Visit [https://github.com/myxzcompagny/max-min/tree/master/max-min](https://github.com/myxzcompagny/max-min/tree/master/max-min).
-
-## Source Repository
-
-**Browse**: [https://github.com/myxzcompagny/max-min](https://github.com/myxzcompagny/max-min).
-
-**Clone**: [scm:git:git@github.com:myxzcompagny/max-min.git](scm:git:git@github.com:myxzcompagny/max-min.git).
-
-## Artifact Repository
-
-Visit [https://www.myxzcompagny.com/repo](https://www.myxzcompagny.com/repo).
+* [Documentation](https://github.com/myxzcompagny/max-min/tree/master/max-min)
+* [Source Code](https://github.com/myxzcompagny/max-min) (clone with `scm:git:git@github.com:myxzcompagny/max-min.git`)
+* [Artifact(s)](https://www.myxzcompagny.com/repo)
 
 ## Coordinates
 
@@ -32,7 +24,7 @@ Visit [https://www.myxzcompagny.com/repo](https://www.myxzcompagny.com/repo).
 
 ```
 Bundle Symbolic Name: org.domain.max.api
-Version             : 1.0.0.201907031508
+Version             : 1.0.0.202003231845
 ```
 
 ## Code Usage
