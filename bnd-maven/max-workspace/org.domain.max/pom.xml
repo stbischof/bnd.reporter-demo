@@ -16,10 +16,6 @@
 	<description>Procedente igitur mox tempore cum adventicium nihil inveniretur, 
 relicta ora maritima in Lycaoniam adnexam Isauriae se contulerunt ibique densis.</description>
 
-	<properties>
-		<templates.dir>file://${project.basedir}/../../../templates</templates.dir>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.osgi.enroute</groupId>

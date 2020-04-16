@@ -17,10 +17,6 @@
 inpulit iam inde a priscis maioribus nobilem, ut locuta est pertinacior fama. nec enim super 
 hoc ulla documentorum rata est fides.</description>
 
-	<properties>
-		<templates.dir>file://${project.basedir}/../../../../templates</templates.dir>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.osgi.enroute</groupId>

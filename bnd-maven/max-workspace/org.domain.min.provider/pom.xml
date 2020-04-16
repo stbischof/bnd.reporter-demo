@@ -32,10 +32,6 @@
 	<scm>
 	</scm>
 	
-	<properties>
-		<templates.dir>file://${project.basedir}/../../../templates</templates.dir>
-	</properties>
-	
 	<dependencies>
 		<dependency>
 			<groupId>org.osgi.enroute</groupId>
