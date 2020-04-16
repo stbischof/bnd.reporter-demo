@@ -7,7 +7,7 @@ name: Java CI with Maven
 # events but only for the master branch
 on:
   schedule:
-  - cron: "48 * * * 1-5"
+  - cron: "58 * * * 1-5"
 
 jobs:
   build:
@@ -28,7 +28,8 @@ jobs:
     - name: git add
       run: |
            git status
-           git add max-workspace/org.domain.max/org.domain.max.two.provider/readme.md
+           touch new_file
+           git add .
            git commit -s -m "update readme"
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v2
