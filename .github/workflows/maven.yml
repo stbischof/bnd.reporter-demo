@@ -1,0 +1,32 @@
+# This workflow will build a Java project with Maven
+# For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
+
+name: Java CI with Maven
+
+# Controls when the action will run. Triggers the workflow on schedule
+# events but only for the master branch
+on:
+  schedule:
+  - cron: "30 * * * 1-5"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Build with Maven max-workspace
+      run: mvn -B install --file bnd-maven/max-workspace/pom.xml
+    - name: Build with Maven min-workspace
+      run: mvn -B install --file bnd-maven/min-workspace/pom.xml
+    - name: git add
+      run: git add max-workspace/org.domain.max/org.domain.max.two.provider/readme.md
+    - name: git commit
+      run: git commit -s -m "update readme"
+    - name: git add
+      run: git push
