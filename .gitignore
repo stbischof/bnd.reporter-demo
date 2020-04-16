@@ -7,3 +7,5 @@
 **/enroute.zip
 **/.metadata
 **/target/
+.project
+.settings/
