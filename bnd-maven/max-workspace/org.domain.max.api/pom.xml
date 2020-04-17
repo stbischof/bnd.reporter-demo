@@ -74,10 +74,6 @@ itinera praetenturis provincialium et viatorum opibus pascebantur.</description>
 		</license>
 	</licenses>
 
-	<properties>
-		<templates.dir>file://${project.basedir}/../../../templates</templates.dir>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.osgi.enroute</groupId>

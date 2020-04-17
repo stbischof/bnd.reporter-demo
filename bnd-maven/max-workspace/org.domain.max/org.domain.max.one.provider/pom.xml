@@ -17,10 +17,6 @@
  adventu cohortium, quae casu propinquabant, nec resistere planitie porrecta 
 conati digressi sunt retroque concedentes omne iuventutis robur relictum in sedibus acciverunt.</description>
 
-	<properties>
-		<templates.dir>file://${project.basedir}/../../../../templates</templates.dir>
-	</properties>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.osgi.enroute</groupId>
