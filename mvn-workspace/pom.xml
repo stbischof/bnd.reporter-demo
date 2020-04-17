@@ -172,6 +172,10 @@ Bundle-SymbolicName: ${project.artifactId}
 		<plugins>
 			<plugin>
 				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>bnd-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>biz.aQute.bnd</groupId>
 				<artifactId>bnd-reporter-maven-plugin</artifactId>
 				<version>${bnd.version}</version>
 				<executions>

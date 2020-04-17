@@ -32,11 +32,5 @@ conati digressi sunt retroque concedentes omne iuventutis robur relictum in sedi
 
 	<build>
 
-		<plugins>
-			<plugin>
-				<groupId>biz.aQute.bnd</groupId>
-				<artifactId>bnd-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
 	</build>
 </project>
