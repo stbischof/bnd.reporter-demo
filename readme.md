@@ -20,5 +20,3 @@ Main documentation page is [here](https://bnd.bndtools.org/chapters/395-generati
 
 * Run `cd bnd-maven/max-workspace` or `cd bnd-maven/min-workspace`
 * Run `mvn clean install`
-* Run `mvn bnd-reporter:readme`
-
