@@ -194,6 +194,7 @@ Bundle-SymbolicName: ${project.artifactId}
 		<module>org.domain.max</module>
 		<module>org.domain.max.api</module>
 		<module>org.domain.min.provider</module>
+		<module>org.domain.gogo</module>
 	</modules>
 
 </project>
